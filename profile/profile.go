@@ -37,6 +37,8 @@ func InitializeAllProfiles() {
 }
 
 func ExecuteProfile(profile *profctx.Profile, summaryChan chan common.InterfaceMessage) {
+	logger.AppLog.Infoln("executing profile:", profileCtx.Name,
+		", profile type:", profileCtx.ProfileType)
 	initEventMap(profile)
 	initProcedureList(profile)
 
